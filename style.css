@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lumios brush ragular';
+   
+    font-style: italic;
+    box-sizing: border-box;
+ }
+
+
+#To-Do-body{
+    width: 100%;
+    /* max-width: 1444px; */
+    overflow: hidden;
+    min-height: 100vh;
+    background-image: linear-gradient(300deg,#076b45 0%,#16325B 74%);
+    background-size: 180% 180%;
+    animation: gradient-animation 8s ease infinite;
+    padding: 10px;
+ }
+ @keyframes gradient-animation{
+    0%{
+       background-position: 0% 50%;
+    }
+    50%{
+       background-position: 100% 50%;
+    }
+    100%{
+       background-position: 0% 50%;
+    }
+ }
+
+
+ .To-Do-main{
+    width: 100%;
+    max-width: 540px;
+    /* min-height: 20vh; */
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 30px 70px;
+    margin: 100px auto 20px;  
+  
+ }
+
+ 
+ .To-Do-main h2{
+    font-size: 30px;
+    font-weight: 700;
+    /* text-align: center; */
+    
+ }
+
+ .To-Do-main h2 img{
+    width: 100%;
+    max-width: 30px;
+    /* padding-bottom: 2px; */
+
+ }
+
+ .add-task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(231, 229, 229); 
+    padding-left: 25px;
+    border-radius: 30px;
+    width: 100%;
+    /* max-width: 450px; */
+    margin-top: 50px;
+    /* margin-left: 30px; */
+ }
+
+ #task-input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 600;
+    padding: 10px;
+ }
+
+ #add-task-btn{
+    background-color: #f8883d;
+    border-radius: 30px;
+    color: aliceblue;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+
+ }
+
+ #added-task{
+    padding: 0;
+    margin-top: 30px;
+ }
+
+ul li{
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    /* font-size: 15px; */
+    font-weight: 600;
+    padding: 12px 8px 12px 60px;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(imgs/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 20px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before{
+    background-image: url(imgs/checked.png);
+    background-position: center;
+    background-size: cover;
+}
+
+ul li span{
+    height: 30px;
+    width: 30px;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    top: 10px;
+    position: absolute;
+    border-radius: 50%;
+    /* background-color: #16325B; */
+}
+ul li span:hover{
+    background-color: #c7c5c5;
+}
